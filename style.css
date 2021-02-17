@@ -126,10 +126,12 @@ p {
 
 /* Home */
 #home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   position: relative;
-  /* background: url('images/bg/bg4.png') center/cover no-repeat; */
-  padding: 160px 40px 40px 40px;
-  text-align: center;
+  height: 100vh;
 }
 
 #home::before {
@@ -181,6 +183,7 @@ p {
   padding: 50px;
   text-align: center;
   margin: auto;
+  height: 100vh;
 }
 
 .section__container {
