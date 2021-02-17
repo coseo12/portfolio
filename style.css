@@ -202,6 +202,10 @@ p {
   margin: 80px 0;
 }
 
+.major {
+  width: 33%;
+}
+
 .major__icon {
   width: 170px;
   height: 170px;
