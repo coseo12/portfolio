@@ -25,7 +25,7 @@
     <nav id="navbar">
       <div class="navbar__logo">
         <img src="images/logo.png" alt="logo" />
-        <a href="#">C.O.SEO</a>
+        <a href="#">SEO</a>
       </div>
       <ul class="navbar__menu">
         <li class="navbar__menu__item active">Home</li>
@@ -51,7 +51,7 @@
       <button class="home__contact">Contact Me</button>
     </section>
     <!-- About -->
-    <section id="about">
+    <section id="about" class="section">
       <h1>About me</h1>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
@@ -72,15 +72,13 @@
         </div>
         <div class="major">
           <div class="major__icon">
-            <i class="fab fa-html5"></i>
+            <i class="fas fa-mobile"></i>
           </div>
           <div class="major__title">Mobile</div>
           <div class="major__description">React Native</div>
         </div>
         <div class="major">
-          <div class="major__icon">
-            <i class="fab fa-html5"></i>
-          </div>
+          <div class="major__icon"><i class="fas fa-server"></i></div>
           <div class="major__title">Back-end</div>
           <div class="major__description">
             Javascript, Node.js <br />
@@ -95,13 +93,17 @@
             alt="Lgdisplay"
             class="job__logo"
           />
-          <p class="job__name">Lg-display as Operator</p>
-          <p class="job__period">2010 Jul - 2013 Sep</p>
+          <div class="job__description">
+            <p class="job__name">Lg-display as Operator</p>
+            <p class="job__period">2010 Jul - 2013 Sep</p>
+          </div>
         </div>
         <div class="job">
           <img src="images/jobs/energen.png" alt="Energen" class="job__logo" />
-          <p class="job__name">Energen as Electronic Engineer</p>
-          <p class="job__period">2014 Nov - 2016 Oct</p>
+          <div class="job__description">
+            <p class="job__name">Energen as Electronic Engineer</p>
+            <p class="job__period">2014 Nov - 2016 Oct</p>
+          </div>
         </div>
         <div class="job">
           <img
@@ -109,10 +111,12 @@
             alt="Synerzen"
             class="job__logo"
           />
-          <p class="job__name">
-            Synerzen as Software Engineer and Electronic Engineer
-          </p>
-          <p class="job__period">2018 Aug - 2019 Sep</p>
+          <div class="job__description">
+            <p class="job__name">
+              Synerzen as Software Engineer and Electronic Engineer
+            </p>
+            <p class="job__period">2018 Aug - 2019 Sep</p>
+          </div>
         </div>
         <div class="job">
           <img
@@ -120,15 +124,17 @@
             alt="Northstar"
             class="job__logo"
           />
-          <p class="job__name">
-            Currently working at Northstar as Software Engineer
-          </p>
-          <p class="job__period">2020 Jan - Until now</p>
+          <div class="job__description">
+            <p class="job__name">
+              Currently working at Northstar as Software Engineer
+            </p>
+            <p class="job__period">2020 Jan - Until now</p>
+          </div>
         </div>
       </div>
     </section>
     <!-- Skills -->
-    <section id="skills">
+    <section id="skills" class="section">
       <h1>Skills</h1>
       <h2>Skills & Attributes</h2>
       <p>
@@ -214,7 +220,7 @@
             </ul>
           </div>
           <div class="etc">
-            <h3 class="skillset__title">Etc</div>
+            <h3 class="skillset__title">Etc</h3>
             <ul class="etc__list">
               <li>
                 <span>Git</span>
@@ -231,7 +237,7 @@
       </div>
     </section>
     <!-- Work -->
-    <section id="work">
+    <section id="work" class="section">
       <h1>My work</h1>
       <h3>Projects</h3>
       <div class="work__categories">
@@ -253,8 +259,12 @@
         </button>
       </div>
       <div class="work__projects">
-        <a class="project__img" href="https://github.com/coseo12/vue-nomflix" target="_blank">
-          <img src="images/projects/movies.png" alt="nomflix"/>
+        <a
+          class="project__img"
+          href="https://github.com/coseo12/vue-nomflix"
+          target="_blank"
+        >
+          <img src="images/projects/movies.png" alt="nomflix" />
           <div class="project__description">
             <h3>Movies Site Vue</h3>
             <span>Clone coding with Vue3.0</span>
@@ -262,8 +272,12 @@
         </a>
       </div>
       <div class="work__projects">
-        <a class="project__img" href="https://github.com/coseo12/kakao-clone" target="_blank">
-          <img src="images/projects/kakao.png" alt="kakao"/>
+        <a
+          class="project__img"
+          href="https://github.com/coseo12/kakao-clone"
+          target="_blank"
+        >
+          <img src="images/projects/kakao.png" alt="kakao" />
           <div class="project__description">
             <h3>Kakao-clone</h3>
             <span>Clone coding with HTML and CSS</span>
@@ -271,8 +285,12 @@
         </a>
       </div>
       <div class="work__projects">
-        <a class="project__img" href="https://github.com/coseo12/nomflix" target="_blank">
-          <img src="images/projects/movies.png" alt="movies"/>
+        <a
+          class="project__img"
+          href="https://github.com/coseo12/nomflix"
+          target="_blank"
+        >
+          <img src="images/projects/movies.png" alt="movies" />
           <div class="project__description">
             <h3>Movies Site React</h3>
             <span>Clone coding with React</span>
@@ -280,8 +298,12 @@
         </a>
       </div>
       <div class="work__projects">
-        <a class="project__img" href="https://github.com/coseo12/ronacorona-dashboard" target="_blank">
-          <img src="images/projects/corona.png" alt="corona"/>
+        <a
+          class="project__img"
+          href="https://github.com/coseo12/ronacorona-dashboard"
+          target="_blank"
+        >
+          <img src="images/projects/corona.png" alt="corona" />
           <div class="project__description">
             <h3>Corona-dashboard-clone</h3>
             <span>Clone coding with Python and plotly, pandas</span>
@@ -289,8 +311,12 @@
         </a>
       </div>
       <div class="work__projects">
-        <a class="project__img" href="https://github.com/coseo12/wetube" target="_blank">
-          <img src="images/projects/wetube.png" alt="wetube"/>
+        <a
+          class="project__img"
+          href="https://github.com/coseo12/wetube"
+          target="_blank"
+        >
+          <img src="images/projects/wetube.png" alt="wetube" />
           <div class="project__description">
             <h3>Wetube Site</h3>
             <span>Clone coding with Pug and express</span>
@@ -298,8 +324,12 @@
         </a>
       </div>
       <div class="work__projects">
-        <a class="project__img" href="https://github.com/coseo12/noovies" target="_blank">
-          <img src="images/projects/noovies.png" alt="noovies"/>
+        <a
+          class="project__img"
+          href="https://github.com/coseo12/noovies"
+          target="_blank"
+        >
+          <img src="images/projects/noovies.png" alt="noovies" />
           <div class="project__description">
             <h3>Noovies</h3>
             <span>Clone coding with React Native and Expo</span>
@@ -308,23 +338,41 @@
       </div>
     </section>
     <!-- Testimonials -->
-    <section id="testimonials">
+    <section id="testimonials" class="section">
       <h1>Testimonials</h1>
       <h3>See what they say about me</h3>
       <div class="testimonials">
         <div class="testimonial">
-          <img src="images/testimonials.png" alt="testimonials" class="testimonial__avatar">
+          <img
+            src="images/testimonials.png"
+            alt="testimonials"
+            class="testimonial__avatar"
+          />
           <div class="testimonial__speech-bubble">
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus, enim deserunt beatae ipsa ab incidunt veritatis quis esse saepe placeat? Voluptatum eum tempore, est ipsa exercitationem quos. Minima, ut aliquam.</p>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus,
+              enim deserunt beatae ipsa ab incidunt veritatis quis esse saepe
+              placeat? Voluptatum eum tempore, est ipsa exercitationem quos.
+              Minima, ut aliquam.
+            </p>
             <p class="name">
               <a href="#" target="_blank">Ano1 / Jobs</a>
             </p>
           </div>
         </div>
         <div class="testimonial">
-          <img src="images/testimonials.png" alt="testimonials" class="testimonial__avatar">
+          <img
+            src="images/testimonials.png"
+            alt="testimonials"
+            class="testimonial__avatar"
+          />
           <div class="testimonial__speech-bubble">
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus, enim deserunt beatae ipsa ab incidunt veritatis quis esse saepe placeat? Voluptatum eum tempore, est ipsa exercitationem quos. Minima, ut aliquam.</p>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus,
+              enim deserunt beatae ipsa ab incidunt veritatis quis esse saepe
+              placeat? Voluptatum eum tempore, est ipsa exercitationem quos.
+              Minima, ut aliquam.
+            </p>
             <p class="name">
               <a href="#" target="_blank">Ano2 / Jobs</a>
             </p>
@@ -333,7 +381,7 @@
       </div>
     </section>
     <!-- Contact -->
-    <section id="contact">
+    <section id="contact" class="section">
       <h1 class="contact__title">Let's talk</h1>
       <h2 class="contact__email">coseo1221@gmail.com</h2>
       <div class="contact__links">
@@ -341,9 +389,7 @@
           <i class="fab fa-github"></i>
         </a>
       </div>
-      <p class="contact__rights">
-        2021 C.O.SEO - All rights reserved
-      </p>
+      <p class="contact__rights">2021 C.O.SEO - All rights reserved</p>
     </section>
   </body>
 </html>
