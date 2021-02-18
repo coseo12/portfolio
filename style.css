@@ -237,7 +237,7 @@ p {
 
 /* Section common */
 .section {
-  padding: 80px;
+  padding: 100px;
   text-align: center;
   margin: auto;
   min-height: 100vh;
