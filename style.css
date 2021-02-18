@@ -124,6 +124,14 @@ p {
   background-color: var(--color-light-grey);
 }
 
+.navbar__toggle-btn {
+  display: none;
+  position: absolute;
+  right: 32px;
+  font-size: 24px;
+  color: var(--color-white);
+}
+
 /* Home */
 #home {
   display: flex;
@@ -131,7 +139,7 @@ p {
   justify-content: center;
   align-items: center;
   position: relative;
-  height: 100vh;
+  padding: 50px 0;
 }
 
 #home::before {
@@ -157,6 +165,7 @@ p {
 }
 
 .home__avatar {
+  margin-top: 100px;
   width: 250px;
   height: 250px;
   border-radius: 50%;
@@ -187,7 +196,6 @@ p {
   padding: 50px;
   text-align: center;
   margin: auto;
-  height: 100vh;
 }
 
 .section__container {
@@ -373,7 +381,8 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 2px;
+  flex-basis: 25%;
+  margin-top: 20px;
 }
 
 .project {
@@ -381,9 +390,8 @@ p {
   justify-content: center;
   align-items: center;
   position: relative;
-  width: 200px;
+  width: 250px;
   height: 250px;
-  margin: 2px;
   background-color: var(--color-light-white);
 }
 
@@ -478,7 +486,6 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 50vh;
 }
 
 .contact__title,
@@ -563,4 +570,50 @@ p {
 .certificate__card__period {
   flex-basis: 33%;
   color: var(--color-light-grey);
+}
+
+/* For below 768px screen width */
+@media screen and (max-width: 768px) {
+  .navbar__toggle-btn {
+    display: block;
+  }
+
+  #navbar {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .navbar__menu {
+    margin-top: 50px;
+    flex-direction: column;
+    display: none;
+  }
+
+  .about__majors {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .major {
+    padding: 20px 0;
+  }
+
+  .skillset {
+    flex-direction: column;
+  }
+
+  .projects-contanier {
+    justify-content: center;
+  }
+
+  .work__projects {
+    margin: 2px;
+  }
+
+  .certificate__container {
+    justify-content: center;
+  }
+  .certificate__card {
+    width: 100%;
+  }
 }
