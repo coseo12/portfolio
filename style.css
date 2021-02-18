@@ -173,6 +173,13 @@ p {
   min-height: 100vh;
 }
 
+.home__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 #home::before {
   content: '';
   position: absolute;
@@ -417,7 +424,7 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 250px;
+  width: 240px;
   margin: 10px;
 }
 
