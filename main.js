@@ -10,6 +10,12 @@ const scrollIntoView = selector => {
   });
 };
 
+const selectNavItem = selected => {
+  selectedNavItem.classList.remove('active');
+  selectedNavItem = navItems[selected];
+  selectedNavItem.classList.add('active');
+};
+
 // Make navbar transparent when it is on the top
 document.addEventListener('scroll', () => {
   if (navbarRect.height < window.scrollY) {
@@ -30,6 +36,7 @@ navbarMenu.addEventListener('click', event => {
   }
   navbarMenu.classList.remove('open');
   scrollIntoView(link);
+  selectNavItem(sectionIds.indexOf(link));
 });
 
 // Navbar toggle button for small screen
@@ -44,6 +51,8 @@ const homeContactBtn = document.querySelector('.home__contact');
 homeContactBtn.addEventListener('click', () => {
   const link = '#contact';
   scrollIntoView(link);
+  selectNavItem(sectionIds.indexOf(link));
+  se;
 });
 
 // Make home slowly fade to transparent as the window  scrolls down
@@ -69,6 +78,7 @@ document.addEventListener('scroll', () => {
 arrowUp.addEventListener('click', () => {
   const link = '#home';
   scrollIntoView(link);
+  selectNavItem(sectionIds.indexOf(link));
 });
 
 // Projects
@@ -102,4 +112,59 @@ workBtnContainer.addEventListener('click', event => {
     });
     projectContainer.classList.remove('animate-out');
   }, 300);
+});
+const sectionIds = [
+  '#home',
+  '#about',
+  '#skills',
+  '#work',
+  '#certificate',
+  // '#testimonials',
+  '#contact',
+];
+const sections = sectionIds.map(id => document.querySelector(id));
+const navItems = sectionIds.map(id =>
+  document.querySelector(`[data-link="${id}"]`)
+);
+const observerOptions = {
+  root: null,
+  rootMargin: '0px',
+  threshold: 0.3,
+};
+let selectedNavItem = navItems[0];
+let selectedNavIndex = 0;
+
+const observerCallback = (entries, observer) => {
+  entries.forEach(entry => {
+    const {
+      target,
+      isIntersecting,
+      boundingClientRect,
+      intersectionRatio,
+    } = entry;
+
+    if (!isIntersecting && intersectionRatio > 0) {
+      const index = sectionIds.indexOf(`#${target.id}`);
+      if (boundingClientRect.y < 0) {
+        selectedNavIndex = index + 1;
+      } else {
+        selectedNavIndex = index - 1;
+      }
+    }
+  });
+};
+
+const observer = new IntersectionObserver(observerCallback, observerOptions);
+sections.forEach(section => observer.observe(section));
+
+window.addEventListener('wheel', () => {
+  if (window.scrollY === 0) {
+    selectedNavIndex = 0;
+  } else if (
+    Math.round(window.scrollY + window.innerHeight) ===
+    document.body.clientHeight
+  ) {
+    selectedNavIndex = navItems.length - 1;
+  }
+  selectNavItem(selectedNavIndex);
 });
