@@ -367,7 +367,6 @@ p {
 .projects-contanier {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
 }
 
 .work__projects {
