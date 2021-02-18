@@ -126,7 +126,7 @@ p {
   justify-content: space-between;
   align-items: center;
   color: var(--color-white);
-  padding: 16px;
+  padding: 5px;
   z-index: 1;
   transition: all var(--animation-duration) ease-in;
 }
@@ -170,6 +170,7 @@ p {
   align-items: center;
   position: relative;
   padding: 50px 0;
+  min-height: 100vh;
 }
 
 #home::before {
@@ -227,9 +228,10 @@ p {
 
 /* Section common */
 .section {
-  padding: 50px;
+  padding: 80px;
   text-align: center;
   margin: auto;
+  min-height: 100vh;
 }
 
 .section__container {
@@ -520,6 +522,7 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  min-height: 45vh;
 }
 
 .contact__title,
