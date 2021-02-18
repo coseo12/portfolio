@@ -500,3 +500,66 @@ p {
   transform: scale(1.1);
   color: var(--color-dark-pink);
 }
+
+/* Certificate */
+#certificate {
+  background-color: var(--color-light-white);
+}
+
+.certificate__container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 80px;
+}
+
+.certificate__card {
+  display: flex;
+  width: 250px;
+  height: 150px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  margin: 20px;
+  border-radius: var(--size-border-radius);
+  background-color: var(--color-white);
+  box-shadow: 8px 8px 15px 2px rgba(0, 0, 0, 0.19);
+  transition: all var(--animation-duration) ease-in;
+}
+
+.certificate__card:hover {
+  transform: scale(1.1);
+}
+
+.certificate__card__icon {
+  font-size: var(--font-large);
+  color: var(--color-dark-pink);
+  flex-basis: 20%;
+}
+
+.certificate__card__description {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 80%;
+  height: 100%;
+}
+
+.certificate__card__title,
+.certificate__card__agency,
+.certificate__card__period {
+  font-size: var(--font-micro);
+  color: var(--color-dark-grey);
+}
+
+.certificate__card__title {
+  flex-basis: 33%;
+  font-weight: var(--weight-bold);
+}
+
+.certificate__card__agency {
+  flex-basis: 33%;
+}
+
+.certificate__card__period {
+  flex-basis: 33%;
+  color: var(--color-light-grey);
+}
