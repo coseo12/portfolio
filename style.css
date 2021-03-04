@@ -43,6 +43,7 @@
 body {
   margin: 0;
   cursor: default;
+  overflow-y: auto;
 }
 
 a {
@@ -71,16 +72,16 @@ button {
 } /* 스크롤 바 밑의 배경 */
 
 ::-webkit-scrollbar-thumb {
-  background: var(--color-dark-pink);
+  background: var(--color-dark-grey);
   border-radius: 10px;
 } /* 실질적 스크롤 바 */
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--color-pink);
+  background: var(--color-light-grey);
 } /* 실질적 스크롤 바 위에 마우스를 올려다 둘 때 */
 
 ::-webkit-scrollbar-thumb:active {
-  background: var(--color-dark-pink);
+  background: var(--color-dark-grey);
 } /* 실질적 스크롤 바를 클릭할 때 */
 
 ::-webkit-scrollbar-button {
@@ -90,28 +91,28 @@ button {
 /* Typography */
 
 h1 {
-  font-size: var(--font-large);
+  font-size: var(--font-medium);
   font-weight: var(--weight-bold);
   color: var(--color-black);
   margin: 16px 0px;
 }
 
 h2 {
-  font-size: var(--font-medium);
+  font-size: var(--font-regular);
   font-weight: var(--weight-semi-bold);
   color: var(--color-black);
   margin: 8px 0;
 }
 
 h3 {
-  font-size: var(--font-regular);
+  font-size: var(--font-small);
   font-weight: var(--weight-regular);
   color: var(--color-black);
   margin: 8px 0;
 }
 
 p {
-  font-size: var(--font-regular);
+  font-size: var(--font-micro);
   font-weight: var(--weight-regular);
   color: var(--color-black);
   margin: 4px 0;
@@ -221,9 +222,16 @@ p {
   color: var(--color-white);
 }
 
+.home_title {
+  font-size: var(--font-medium);
+}
+.home__description {
+  font-size: var(--font-small);
+}
+
 .home__contact {
   color: var(--color-white);
-  font-size: var(--font-regular);
+  font-size: var(--font-small);
   font-weight: var(--weight-bold);
   margin: 24px;
   padding: 8px 12px;
@@ -237,7 +245,7 @@ p {
 
 /* Section common */
 .section {
-  padding: 100px;
+  padding: 90px 10px;
   text-align: center;
   margin: auto;
   /* min-height: 100vh; */
@@ -252,11 +260,14 @@ p {
 .about__majors {
   display: flex;
   justify-content: space-between;
-  margin: 80px 0;
+  margin: 40px 0;
 }
 
 .major {
-  width: 33%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .major__icon {
@@ -267,7 +278,6 @@ p {
   color: var(--color-blue);
   border: 1px solid var(--color-blue);
   border-radius: 50%;
-  margin: auto;
   margin-bottom: 16px;
   transition: all var(--animation-duration);
 }
@@ -290,6 +300,8 @@ p {
 
 .major__description {
   color: var(--font-medium);
+  width: 220px;
+  height: 100px;
 }
 
 .job {
@@ -627,14 +639,14 @@ p {
 /* Arrow up */
 .arrow-up {
   position: fixed;
-  right: 50px;
-  bottom: 50px;
-  font-size: var(--font-large);
+  right: 35px;
+  bottom: 35px;
+  font-size: var(--font-medium);
   color: var(--color-white);
   background-color: var(--color-dark-pink);
   border-radius: 50%;
-  width: 70px;
-  height: 70px;
+  width: 50px;
+  height: 50px;
   opacity: 0;
   pointer-events: none;
   transition: all var(--animation-duration) ease-in;
@@ -676,6 +688,15 @@ p {
   .about__majors {
     flex-direction: column;
     align-items: center;
+  }
+
+  .job {
+    flex-direction: column;
+  }
+
+  .job__description {
+    width: 220px;
+    text-align: center;
   }
 
   .major {
