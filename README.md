@@ -64,7 +64,7 @@
 
 ## Wireframing
 
-- [Merteial Color](https://material.io/resources/color/#!/?view.left=0&view.right=0)
+- [Marteial Color](https://material.io/resources/color/#!/?view.left=0&view.right=0)
 - [Google Fonts](https://fonts.google.com/)
 - [UX Mastery youtube](https://www.youtube.com/watch?v=8-vTd7GRk-w&feature=emb_logo)
 
